@@ -7,9 +7,9 @@ git clone https://github.com/heinz-otto/docker-smf.git
 cd docker-smf
 docker build . -t smf:2.1
 ```
-`docker run -p 8500:80 -e 'SMF_BOARD_URL=http://localhost:8500/' smf:2.1`
+`docker run -p 8500:80 -e 'SMF_BOARD_URL=http://dockerhost:8500/' smf:2.1`
 
-Access the site with <http://localhost:8500>
+Access the site with <http://dockerhost:8500>
 
 Admin credentials: `Admin/admin`
 
