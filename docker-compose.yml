@@ -1,10 +1,9 @@
-version: '3'
 services:
   smf:
-    container_name: smf
+    container_name: smf21
     build: .
-    image: smf
+    image: smf:2.1
     ports:
-      - "8500:80"
+      - "8501:80"
     environment:
-      - SMF_BOARD_URL=http://localhost:8500/
+      - SMF_BOARD_URL=http://localhost:8501/
