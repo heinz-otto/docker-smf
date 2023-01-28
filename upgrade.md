@@ -1,6 +1,6 @@
 # update to smf 2.1.3
-* download large upgrade version of your choice (smf_2-1-3_upgrade.xxx) from https://download.simplemachines.org/ 
-* I don't find a way with wget - only with Browser on my Windows machine.
+* download the large upgrade version smf_2-1-3_upgrade.tar.gz from https://download.simplemachines.org/ . I don't know a way with wget - I was doing the job on my windows machine. 
+* Than copy the file to dockerhost.
 ```
 scp smf_2-1-3_upgrade.tar.gz user@dockerhost:
 ```
@@ -12,7 +12,7 @@ look for container names
 ```
 docker container ps
 ```
-copy the whole sub directory smf from the actual directory to container smf and overwrite existing files in directory /var/www/smf
+copy the whole sub directory smf from the actual directory on dockerhost to the container smf directory /var/www/smf (overwrite existing files)
 ```
 docker cp ./smf/ smf:/var/www
 ```
