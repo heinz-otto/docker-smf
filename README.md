@@ -2,7 +2,11 @@
 Docker image for SMF
 
 ## How to run
-`docker run -p 8500:80 -e 'SMF_BOARD_URL=http://localhost:8500/' eeems/smf`
+``` git clone http:// ....
+cd docker-smf
+docker build . -t smf:2.1
+```
+`docker run -p 8500:80 -e 'SMF_BOARD_URL=http://localhost:8500/' smf:2.1`
 
 Access the site with <http://localhost:8500>
 
@@ -12,6 +16,8 @@ Admin credentials: `Admin/admin`
 ![Screen-recording](https://i.imgur.com/laKoSDV.gif)
 
 ## Example docker-compose.yml
+
+use docker-compose.yml from github
 
 ```yaml
 version: '3'
