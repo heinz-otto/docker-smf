@@ -4,13 +4,20 @@
 ```
 scp smf_2-1-3_upgrade.tar.gz user@dockerhost:
 ```
-Login dockerhost
+Login to dockerhost, than extract the copied tar. 
 ```
 mkdir smf && tar xf smf_2-1-3_upgrade.tar.gz -C smf
 ```
-* get container names docker container ps
-* Our container is smf. copy the whole sub directory smf from the actual directory to container smf and overwrite existing dir /var/www/smf
+look for container names 
+```
+docker container ps
+```
+copy the whole sub directory smf from the actual directory to container smf and overwrite existing files in directory /var/www/smf
 ```
 docker cp ./smf/ smf:/var/www
 ```
-open in Browser http://yourdockerhost:8500/upgrade.php and follow the steps
+repair ownership 
+```
+docker exec smf chown -R www-data: /var/www/smf
+```
+open in Browser http://dockerhost:8500/upgrade.php and follow the steps
