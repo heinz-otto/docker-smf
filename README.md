@@ -2,7 +2,8 @@
 Docker image for SMF
 
 ## How to run
-``` git clone http:// ....
+```
+git clone https://github.com/heinz-otto/docker-smf.git
 cd docker-smf
 docker build . -t smf:2.1
 ```
@@ -17,7 +18,7 @@ Admin credentials: `Admin/admin`
 
 ## Example docker-compose.yml
 
-use docker-compose.yml from github
+use instead docker-compose.yml from github
 
 ```yaml
 version: '3'
