@@ -1,19 +1,23 @@
 # docker-smf
 Docker image to Setup quick and easy a Simple Machines Forum
 ## New simplified version - How to run
-First step: download smf_2-1.._install.tar.gz version from [simplemachines](https://download.simplemachines.org/) in the actual directory.
+* download smf_2-1.._install.tar.gz version from [simplemachines](https://download.simplemachines.org/) in the actual directory.
+* create the working directories and download files 
 ```
 directory=simple-smf
 mkdir ${directory} && cd ${directory} && mkdir smf  # create working directories
 wget https://raw.githubusercontent.com/heinz-otto/docker-smf/master/{Dockerfile,.env,docker-compose.yml}
 tar xzf ../smf_2-1-?_install.tar.gz  -C smf
 sudo chown -R www-data:www-data smf/*
-docker compose up
 ```
 * Edit the files .env and docker-compose.yml according to your needs: port,password
+* build the image and start up the services
+```
+docker compose up
+```
 * open http://host:port for setup
-* replace locahost with servicename (mariadb) for database and finish the setup
-after setup, remove install.php to prevent warning
+  * replace locahost with servicename (mariadb) for database and finish the setup
+after setup, remove install.php to preventing a warning message
 ```
 sudo rm smf/install.php
 ```
