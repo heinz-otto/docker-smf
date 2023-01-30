@@ -30,14 +30,8 @@ sudo rm -R ../${directory} && cd ..
 ```
 # Old version
 ## How to run
-download smf....install.tar.gz version from [simplemachines](https://download.simplemachines.org/) in the actual directory.
-```
-git clone https://github.com/heinz-otto/docker-smf.git
-cd docker-smf
-cp ../smf*install.tar.gz .
-docker build . -t smf:2.1
-```
-`docker run -p 8500:80 -e 'SMF_BOARD_URL=http://dockerhost:8500/' smf:2.1`
+
+`docker run -p 8500:80 -e 'SMF_BOARD_URL=http://dockerhost:8500/' eeems/smf`
 
 Access the site with <http://dockerhost:8500>
 
