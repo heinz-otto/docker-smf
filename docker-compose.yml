@@ -8,7 +8,7 @@ services:
     environment:
       - SMF_BOARD_URL=http://${HOSTNAME}:${SMF_PORT}/
     volumes:
-    - ${HOME}/smf:/var/www/html
+    - ${PWD}/smf:/var/www/html
     depends_on:
       - mariadb
   mariadb:
