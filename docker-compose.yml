@@ -1,7 +1,10 @@
 services:
   smf:
     container_name: ${APP_NAME}_apache
-    build: .
+    build:
+      context: .
+      args:
+        BASE_IMAGE_TAG: 7.1-apache
     image: smf:test
     ports:
       - "${SMF_PORT}:80"
