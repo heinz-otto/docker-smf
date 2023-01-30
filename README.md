@@ -13,14 +13,19 @@ sudo chown -R www-data:www-data smf/*
 * Edit the file .env (port,db password), and docker-compose.yml.
 * build the image and start up the services
 ```
-docker compose up
+docker compose up -d
 ```
 * open http://host:port for setup
   * replace locahost with servicename (mariadb) for database and finish the setup
 
-after setup, remove install.php to preventing a warning message
+after setup, remove install.php to preventing a warning message on all pages
 ```
 sudo rm smf/install.php
+```
+## cleanup if no further use
+```
+docker compose down -v --rmi all
+sudo rm -R ../${directory} && cd ..
 ```
 # Old version
 ## How to run
