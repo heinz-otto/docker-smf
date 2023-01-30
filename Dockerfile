@@ -3,6 +3,7 @@ RUN apt-get update
 RUN bash -c 'debconf-set-selections <<< "mariadb-server mysql-server/root_password password rootpass" ' \
 	&& bash -c 'debconf-set-selections <<< "mariadb-server mysql-server/root_password_again password rootpass" '
 RUN apt-get install -y mariadb-server mariadb-client zip libxml2-dev libpng-dev
+# https://hub.docker.com/_/php
 RUN docker-php-ext-install mysqli simplexml mbstring gd
 RUN service mysql start \
 	&& mysql --password=rootpass -e "create database smf;grant all privileges on smf.* to 'smf'@'localhost' identified by 'smfpass' with grant option;" \
