@@ -10,9 +10,9 @@ tar xzf ../smf_2-1-?_install.tar.gz  -C smf
 sudo chown -R www-data:www-data smf/*
 docker compose up
 ```
-Edit the files .env and docker-compose.yml according to your needs: port,password
-open http://host:port for setup
-replace locahost with servicename (mariadb) for database and finish the setup
+* Edit the files .env and docker-compose.yml according to your needs: port,password
+* open http://host:port for setup
+* replace locahost with servicename (mariadb) for database and finish the setup
 after setup, remove install.php to prevent warning
 ```
 sudo rm smf/install.php
