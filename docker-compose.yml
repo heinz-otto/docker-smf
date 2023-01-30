@@ -9,7 +9,6 @@ services:
     ports:
       - "${SMF_PORT}:80"
     environment:
-      - SMF_BOARD_URL=http://${HOSTNAME}:${SMF_PORT}/
       - TZ
     volumes:
     - ${PWD}/smf:/var/www/html
