@@ -1,4 +1,5 @@
 # update to smf 2.1.3
+For the original image eeems/smf only https://github.com/Eeems/docker-smf
 * download the large upgrade version smf_2-1-3_upgrade.tar.gz from https://download.simplemachines.org/ . I don't know a way with wget - I was doing the job on my windows machine. 
 * Than copy the file to dockerhost.
 ```
