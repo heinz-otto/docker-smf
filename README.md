@@ -22,7 +22,8 @@ after setup, remove install.php to preventing a warning message on all pages
 ```
 sudo rm smf/install.php
 ```
-## cleanup
+## quick cleanup the whole setup
+caution! all (also database) will be removed
 ```
 docker compose down -v --rmi all
 sudo rm -R ../${directory} && cd ..
