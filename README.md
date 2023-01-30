@@ -17,6 +17,7 @@ docker compose up
 ```
 * open http://host:port for setup
   * replace locahost with servicename (mariadb) for database and finish the setup
+
 after setup, remove install.php to preventing a warning message
 ```
 sudo rm smf/install.php
