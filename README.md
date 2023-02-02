@@ -1,5 +1,7 @@
 # docker-smf
 Docker image for quick & easy setting up a Simple Machines Forum
+
+Tested with version 2.0.15 & 2.1.3
 ## New simplified version - How to run
 * download smf_2-1.._install.tar.gz version from [simplemachines](https://download.simplemachines.org/) in the actual directory.
 * create the working directories and download files 
@@ -10,7 +12,7 @@ wget https://raw.githubusercontent.com/heinz-otto/docker-smf/master/{Dockerfile,
 tar xzf ../smf_2-1-?_install.tar.gz  -C smf
 sudo chown -R www-data:www-data smf/*
 ```
-* Edit the file .env (port,db password), and docker-compose.yml (commentlines for smf_2-0-*)
+* Edit the file .env (port,db password), and docker-compose.yml (lines of comment for smf_2-0-*)
 * build the image and start up the services
 ```
 docker compose up -d
