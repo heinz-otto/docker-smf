@@ -10,7 +10,7 @@ wget https://raw.githubusercontent.com/heinz-otto/docker-smf/master/{Dockerfile,
 tar xzf ../smf_2-1-?_install.tar.gz  -C smf
 sudo chown -R www-data:www-data smf/*
 ```
-* Edit the file .env (port,db password), and docker-compose.yml.
+* Edit the file .env (port,db password), and docker-compose.yml (commentlines for smf_2-0-*)
 * build the image and start up the services
 ```
 docker compose up -d
