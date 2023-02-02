@@ -15,8 +15,8 @@ services:
     depends_on:
       - mariadb
   mariadb:
-#  image: mariadb:10.0 
-  image: mariadb
+#    image: mariadb:10.0 
+    image: mariadb
     container_name: ${APP_NAME}_mariadb
     restart: always
     environment:
