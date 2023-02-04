@@ -20,6 +20,7 @@ sudo chown -R www-data:www-data smf/*
 * Edit the file .env (port,db password), and docker-compose.yml (lines of comment for smf_2-0-*)
 * build the image and start up the services
 ```
+sed -i "s/APP_NAME=.*/APP_NAME=${PWD##*\/}/" .env
 docker compose up -d
 ```
 * open http://host:port for setup
