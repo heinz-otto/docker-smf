@@ -5,6 +5,7 @@ Tested with version 2.0.15 & 2.1.3
 ## New simplified version - How to run
 * download smf_2-1.._install.tar.gz version from [simplemachines](https://download.simplemachines.org/) in the actual directory. You could not download archieved versions directly by cli.
 ```
+wget https://download.simplemachines.org/index.php/smf_2-0-19_install.tar.gz
 wget https://download.simplemachines.org/index.php/smf_2-1-3_install.tar.gz
 wget https://download.simplemachines.org/index.php/smf_2-1-3_upgrade.tar.gz
 ```
