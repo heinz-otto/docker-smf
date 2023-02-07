@@ -37,6 +37,7 @@ sudo rm smf/install.php
 caution! all (also database) will be removed
 Be carefully, it will removing the actual directory! 
 ```
+sudo rm -R smf/*
 docker compose down -v --rmi all
 sudo rm -R ${PWD} && cd ..
 ```
