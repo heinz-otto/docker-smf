@@ -4,8 +4,8 @@ services:
     build:
       context: .
       args:
-        BASE_IMAGE_TAG: ${BASE_IMAGE_TAG:-7.1-apache}
-    image: smf:test
+        BASE_IMAGE_TAG: ${BASE_IMAGE_TAG:-apache}
+    image: smf:${BASE_IMAGE_TAG:-apache}
     ports:
       - "${SMF_PORT:-8500}:80"
     environment:
@@ -13,14 +13,13 @@ services:
     volumes:
     - ${PWD}/smf:/var/www/html
     depends_on:
-      - mariadb
-  mariadb:
-    image: mariadb:${DB_TAG:-10.0}
-    container_name: ${APP_NAME:-smf}_mariadb
+      - mysql
+  mysql:
+    image: mysql:${DB_TAG:-latest}
+    container_name: ${APP_NAME:-smf}_mysql
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-#      - MARIADB_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - TZ
     volumes:
       - mysql:/var/lib/mysql
