@@ -4,8 +4,8 @@ services:
     build:
       context: .
       args:
-        BASE_IMAGE_TAG: ${BASE_IMAGE_TAG:-apache}
-    image: smf:${BASE_IMAGE_TAG:-apache}
+        BASE_IMAGE_TAG: ${BASE_IMAGE_TAG:-5.6.39-apache}
+    image: smf:${BASE_IMAGE_TAG:-5.6.39-apache}
     ports:
       - "${SMF_PORT:-8500}:80"
     environment:
@@ -15,7 +15,7 @@ services:
     depends_on:
       - mysql
   mysql:
-    image: mysql:${DB_TAG:-latest}
+    image: mysql:${DB_TAG:-5.7.33}
     container_name: ${APP_NAME:-smf}_mysql
     restart: always
     environment:
