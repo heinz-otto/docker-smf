@@ -21,6 +21,9 @@ sudo chown -R www-data:www-data smf/*
 * build the image and start up the services
 ```
 sed -i "s/APP_NAME=.*/APP_NAME=${PWD##*\/}/" .env
+sed -i "s/SMF_PORT=.*/SMF_PORT=850$(ls ../forum*/docker-compose.yml|wc -l)/" .env
+sed -i "s/DB_TAG=.*/DB_TAG=latest/" .env
+sed -i "s/BASE_IMAGE_TAG=.*/BASE_IMAGE_TAG=apache/" .env
 docker compose up -d
 ```
 * open http://host:port for setup
